@@ -1,0 +1,257 @@
+/* style.css - Estilos generales */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variables de color y tipografía */
+:root {
+    --color-primary: #462c95;      /* Nuevo color principal */
+    --color-secondary: #9E8FCE;    /* Color secundario ajustado para combinar */
+    --color-accent: #986853;       /* Dorado para contraste */
+    --color-text: #ffffff;         /* Texto blanco para mejor contraste */
+    --color-text-dark: #333333;    /* Para textos sobre fondos claros */
+    --color-background: #040411ff;   /* Fondo principal */
+    --color-card: #F0F8F4;         /* Fondo para tarjetas */
+    --font-primary: 'music-serif', Georgia, serif;
+    --font-secondary: 'Arial', sans-serif;
+}
+/* Estilos generales */
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+/* Header y navegación */
+header {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+}
+
+.transparent-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%);
+    transition: background 0.3s ease;
+}
+
+.transparent-header.scrolled {
+    background: #462c95f2;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+}
+
+/* Navegación */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--color-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+.svg-icon img {
+    width: 40px; height: 40px;
+}
+
+
+
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(70, 44, 149, 0.8), rgba(70, 44, 149, 0.9)), url('../images/performances/main-stage.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-text);
+}
+.hero-content h1 {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* Secciones principales */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 7%;
+}
+
+/* botones imagenes compositores*/
+.members-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.member-tab {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.member-tab img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.member-tab:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Tarjetas de miembros */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.member-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.314), rgba(0, 0, 0, 0.503)), url('../images/members/member1.jpg');
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: var(--color-text-dark);
+    height: 15rem;
+}
+
+.member-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.member-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 1rem;
+}
+
+.member-social {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.composer-name {
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.composer-details {
+    display: flex;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.5rem;
+}
+
+.member-biography {
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 1rem 6rem;
+    display: none;
+}
+
+.member-biography.active {
+    display: block;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--color-text);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2 2rem;
+}
+
+footer p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}

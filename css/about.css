@@ -1,0 +1,59 @@
+/* eslilo de la hoja de "historia" */
+
+.member-card-about img {
+    max-height: 100%;
+    max-width: 100%;
+    display: inline-flex;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.284);
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 400px;
+    margin: 3rem auto;
+}
+
+.image-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-carousel img.active {
+    opacity: 1;
+}
+
+.section-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 0 0;
+    padding: 0 6rem;
+}
+
+.about-content h2 {
+    font-size: 32px;    
+}
+
+.members-grid-about {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1px 0 0 0;
+}
+
+.footer-content {
+    margin: 6rem 0 0 0;
+}
