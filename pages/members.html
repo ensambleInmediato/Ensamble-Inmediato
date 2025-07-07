@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensamble Inmediato - Integrantes</title>
+    <link rel="stylesheet" href="../css/members.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style> 
+        .svg-icon img {width: 40px; height: 40px;}
+        .member-biography {
+            display: none; /* Ocultar todas las biografías por defecto */
+        }
+        .member-biography.active {
+            display: block; /* Mostrar solo la biografía activa */
+        }
+    </style>
+</head>
+<body>
+    <header class="transparent header">
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="about.html">Historia</a>
+            <a href="members.html">Integrantes</a>
+            <a href="../index.html#content">Conciertos</a>
+            <a href="gallery.html">Galería</a>
+            <a href="../index.html#mycontact">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="members-section">
+        <div class="container">
+            <h1 class="section-title">Integrantes</h1>
+            <div class="members-nav">
+                <button class="member-tab active" data-member="member1"><img src="../images/members/member1.jpg" alt="Mizky Bernal Miranda"></button>
+                <button class="member-tab" data-member="member2"><img src="../images/members/member2.jpg" alt="Yerko Esetevez"></button>
+                <button class="member-tab" data-member="member3"><img src="../images/members/member3.jpeg" alt="Jose Ignacion Camacho"></button>
+                <button class="member-tab" data-member="member4"><img src="../images/members/member4.jpeg" alt="Guillermo Leonardini"></button>
+                <button class="member-tab" data-member="member5"><img src="../images/members/member5.jpeg" alt="Jorge Monroy"></button>
+            </div>
+            <div class="members-list">
+                <!-- Primer miembro activo por defecto -->
+                <div class="member-card" data-member="member1">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Mizky Bernal Miranda</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> Enero 1991</li>
+                            <li><strong>Instrumento:</strong> Piano</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography active" data-member="member1">
+                    <h3>Biografía</h3>
+                    <h2>Mizky Bernal Miranda</h2>
+                    <p>Biografía detallada de Mizky Bernal Miranda. 
+                    Mizky Bernal Miranda nació en La Paz, Bolivia en 1991.
+                    Estudió piano en la Escuela Nacional de Música de La Paz y en la Universidad Mayor de San Andrés.
+                    Ha participado en varios festivales de música contemporánea en Bolivia y en el extranjero.
+                    Actualmente es miembro del Ensamble Inmediato y se desempeña como pianista y compositor.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vel! Veritatis, ipsa. Incidunt, nisi ipsum consectetur 
+                    totam necessitatibus libero possimus expedita nam vel eos sapiente fuga autem doloremque veniam? Nulla consequuntur modi delectus dicta 
+                    cum repellendus expedita itaque eos quis asperiores quod praesentium, minima voluptatum nemo. Pariatur, sequi assumenda. Omnis, quidem ea dolorem amet
+                     dolores asperiores quis velit rem hic accusamus iste porro, nulla totam consectetur tenetur a, laudantium reiciendis non itaque ex corrupti ducimus animi reprehenderit architecto. 
+                     Nam nesciunt laudantium repellat aspernatur, ex voluptate, nulla fugit blanditiis atque doloribus quod non mollitia. Necessitatibus, natus illo dolorem illum molestias repudiandae possimus. 
+                     Natus facere corrupti atque sequi repudiandae culpa ab pariatur perferendis distinctio. Numquam iure eveniet impedit, rem dolor incidunt animi quo est dolore qui, sapiente placeat blanditiis aliquid, 
+                     vitae minus delectus. Odit, molestiae. Error aliquam recusandae aut placeat nisi minus fugit nemo quis quidem officia magnam at, non libero maiores quod doloremque tenetur vero ipsum c
+                     upiditate voluptatibus itaque ex harum, excepturi ut. Itaque eos obcaecati voluptatibus fuga cumque, tempore voluptate ut aut modi repellat illum error facere omnis sapiente velit id sequi minima non 
+                     laboriosam vero rem blanditiis. Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium fugiat dolores! Assumenda laudantium libero atque nihil cupiditate nulla non, temporibus minima laboriosam corrupti! Explicabo quaerat non delectus alias? Minima veniam sapiente eos eligendi v
+                     oluptate! Ipsa tenetur culpa amet pariatur veritatis magni, et accusamus, vitae ullam impedit repellendus ea ipsum. Illo temporibus assumenda inventore aliquam repellendus fuga totam libero aliquid, quas perferendis, 
+                     enim incidunt earum perspiciatis est saepe facere doloremque, veniam sunt ex repellat nisi labore. Ab molestias soluta, consequatur vitae non nihil quia consequuntur porro accusamus nostrum ipsa officia, commodi 
+                     autem debitis repellendus fugit incidunt voluptatibus? Cumque mollitia doloremque perferendis assumenda quia earum dicta eligendi! Sed fuga neque harum quod eius debitis magni praesentium, fugit sapiente reiciendis 
+                     quaerat culpa id labore repudiandae ullam rerum. Sed ipsum, quas nesciunt reiciendis labore corporis veritatis omnis in officiis repellendus rerum, nihil perferendis voluptate beatae facere fugit. Aliquam, 
+                     officia quos quo distinctio reprehenderit ipsum et, maxime laudantium ex provident fugiat possimus cumque delectus. Ratione necessitatibus, mollitia error recusandae aliquid accusamus eveniet, at voluptates 
+                     itaque alias consequuntur vel hic voluptatum ut nemo incidunt sapiente vitae debitis doloremque aliquam numquam! Ipsum totam, illo ipsa molestias delectus, cumque numquam ex harum dignissimos asperiores atque sint. 
+                     Ab nobis eius voluptatibus laboriosam quibusdam reprehenderit neque! Rerum voluptas voluptatibus consectetur, culpa corporis, veniam qui dolore eum quis quae a, fuga provident saepe architecto minima.
+                    </p>
+                    </p>
+                </div>
+
+                <!-- Otro Compositor/a -->
+                <div class="member-card" data-member="member2" style="display:none;">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Yerko Estevez Salazar</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> Agosto 1994</li>
+                            <li><strong>Instrumento:</strong> Guitarra</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography" data-member="member2">
+                    <h3>Biografía</h3>
+                    <h2>Yerko Estevez Salazar</h2>
+                    <p>Biografía detallada de Yerko Estevez Salazar.
+                    Yerko Estevez Salazar nació en La Paz, Bolivia en 1994.
+                    Estudió guitarra en la Escuela Nacional de Música de La Paz y en la Universidad Mayor de San Andrés.
+                    Ha participado en varios festivales de música contemporánea en Bolivia y en el extranjero.
+                    Actualmente es miembro del Ensamble Inmediato y se desempeña como guitarrista y compositor.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vel! Veritatis, ipsa. Incidunt, nisi ipsum consectetur
+                    totam necessitatibus libero possimus expedita nam vel eos sapiente fuga autem doloremque veniam? Nulla consequuntur modi delectus dicta
+                    cum repellendus expedita itaque eos quis asperiores quod praesentium, minima voluptatum nemo. Pariatur, sequi assumenda. Omnis, quidem ea dolorem amet
+                    dolores asperiores quis velit rem hic accusamus iste porro, nulla totam consectetur tenetur a, laudantium reiciendis non itaque ex corrupti ducimus animi reprehenderit architecto.
+                    Natus facere corrupti atque sequi repudiandae culpa ab pariatur perferendis distinctio. Numquam iure eveniet impedit, rem dolor incidunt animi quo est dolore qui, sapiente placeat blanditiis aliquid, 
+                     vitae minus delectus. Odit, molestiae. Error aliquam recusandae aut placeat nisi minus fugit nemo quis quidem officia magnam at, non libero maiores quod doloremque tenetur vero ipsum c
+                     upiditate voluptatibus itaque ex harum, excepturi ut. Itaque eos obcaecati voluptatibus fuga cumque, tempore voluptate ut aut modi repellat illum error facere omnis sapiente velit id sequi minima non 
+                     laboriosam vero rem blanditiis. Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium fugiat dolores! Assumenda laudantium libero atque nihil cupiditate nulla non, temporibus minima laboriosam corrupti! Explicabo quaerat non delectus alias? Minima veniam sapiente eos eligendi v
+                     oluptate! Ipsa tenetur culpa amet pariatur veritatis magni, et accusamus, vitae ullam impedit repellendus ea ipsum. Illo temporibus assumenda inventore aliquam repellendus fuga totam libero aliquid, quas perferendis, 
+                     enim incidunt earum perspiciatis est saepe facere doloremque, veniam sunt ex repellat nisi labore. Ab molestias soluta, consequatur vitae non nihil quia consequuntur porro accusamus nostrum ipsa officia, commodi 
+                     autem debitis repellendus fugit incidunt voluptatibus? Cumque mollitia doloremque perferendis assumenda quia earum dicta eligendi! Sed fuga neque harum quod eius debitis magni praesentium, fugit sapiente reiciendis
+                    </p>
+                </div>
+                
+                <!-- otro compositor/a -->
+                <div class="member-card" data-member="member3" style="display:none;">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Jose Ignacio Camacho Cardozo</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> Julio 1993</li>
+                            <li><strong>Instrumento:</strong> Guitarra</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography" data-member="member3">
+                    <h3>Biografía</h3>
+                    <h2>Jose Ignacio Rolando Camacho Cardozo</h2>
+                    <p>Biografía detallada de Jose Ignacio Camacho Cardozo.
+                    Jose Ignacio Camacho Cardozo nació en La Paz, Bolivia en 1992.
+                    Estudió guitarra en la Escuela Nacional de Música de La Paz y en la Universidad Mayor de San Andrés.
+                    Ha participado en varios festivales de música contemporánea en Bolivia y en el extranjero.
+                    Actualmente es miembro del Ensamble Inmediato y se desempeña como guitarrista y compositor.
+                    Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium fugiat dolores! Assumenda laudantium libero atque nihil cupiditate nulla non, temporibus minima laboriosam corrupti! Explicabo quaerat non delectus alias? Minima veniam sapiente eos eligendi v
+                     oluptate! Ipsa tenetur culpa amet pariatur veritatis magni, et accusamus, vitae ullam impedit repellendus ea ipsum. Illo temporibus assumenda inventore aliquam repellendus fuga totam libero aliquid, quas perferendis, 
+                     enim incidunt earum perspiciatis est saepe facere doloremque, veniam sunt ex repellat nisi labore. Ab molestias soluta, consequatur vitae non nihil quia consequuntur porro accusamus nostrum ipsa officia, commodi 
+                     autem debitis repellendus fugit incidunt voluptatibus? Cumque mollitia doloremque perferendis assumenda quia earum dicta eligendi! Sed fuga neque harum quod eius debitis magni praesentium, fugit sapiente reiciendis 
+                     quaerat culpa id labore repudiandae ullam rerum. Sed ipsum, quas nesciunt reiciendis labore corporis veritatis omnis in officiis repellendus rerum, nihil perferendis voluptate beatae facere fugit. Aliquam, 
+                     officia quos quo distinctio reprehenderit ipsum et, maxime laudantium ex provident fugiat possimus cumque delectus. Ratione necessitatibus, mollitia error recusandae aliquid accusamus eveniet, at voluptates 
+                     itaque alias consequuntur vel hic voluptatum ut nemo incidunt sapiente vitae debitis doloremque aliquam numquam! Ipsum totam, illo ipsa molestias delectus, cumque numquam ex harum dignissimos asperiores atque sint. 
+                     Ab nobis eius voluptatibus laboriosam quibusdam reprehenderit neque! Rerum voluptas voluptatibus consectetur, culpa corporis, veniam qui dolore eum quis quae a, fuga provident saepe architecto minima.
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vel! Veritatis, ipsa. Incidunt, nisi ipsum consectetur
+                     totam necessitatibus libero possimus expedita nam vel eos sapiente fuga autem doloremque veniam? Nulla consequuntur modi delectus dicta
+                     cum repellendus expedita itaque eos quis asperiores quod praesentium, minima voluptatum nemo. Pariatur, sequi assumenda. Omnis, quidem ea dolorem amet
+                     dolores asperiores quis velit rem hic accusamus iste porro, nulla totam consectetur tenetur a, laudantium reiciendis non itaque ex corrupti ducimus animi reprehenderit architecto.
+                     Natus facere corrupti atque sequi repudiandae culpa ab
+                    </p>
+                </div>
+
+                <!-- otro compositor/a -->
+                <div class="member-card" data-member="member4" style="display:none;">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Guillermo Daniel Leonaridini Gutierrez</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> Octubre 1993</li>
+                            <li><strong>Instrumento:</strong> Guitarra</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography" data-member="member4">
+                    <h3>Biografía</h3>
+                    <h2>Guillermo Daniel Leonardini Guitierrez</h2>
+                    <p>Biografía detallada de Guillermo Daniel Leonaridini Gutierrez.
+                    Guillermo Daniel Leonaridini Gutierrez nació en La Paz, Bolivia en 1993.
+                    Estudió guitarra en la Escuela Nacional de Música de La Paz y en la Universidad Mayor de San Andrés.
+                    Ha participado en varios festivales de música contemporánea en Bolivia y en el extranjero.
+                    Actualmente es miembro del Ensamble Inmediato y se desempeña como guitarrista y compositor.
+                    Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium
+                     Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium
+
+                    </p>
+                </div>
+
+                <div class="member-card" data-member="member5" style="display:none;">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Jorge Monroy Barriga</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> noviembre 1994</li>
+                            <li><strong>Instrumento:</strong> Guitarra</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography" data-member="member5">
+                    <h3>Biografía</h3>
+                    <h2>Jorge Mauricio Monroy Barriga</h2>
+                    <p>Biografía detallada de Jorge Monroy Barriga.
+                    Jorge Monroy Barriga nació en La Paz, Bolivia en 1994.
+                    Estudió guitarra en la Escuela Nacional de Música de La Paz y en la Universidad Mayor de San Andrés.
+                    Ha participado en varios festivales de música contemporánea en Bolivia y en el extranjero.
+                    Actualmente es miembro del Ensamble Inmediato y se desempeña como guitarrista y compositor.
+                    Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium
+                     Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assum
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assumenda laboriosam. At reprehenderit officia saepe autem sed obcaecati nemo porro deleniti similique adipisci minima, 
+                     reiciendis laboriosam ex accusantium animi perspiciatis rem totam omnis a asperiores! Similique ad cum nobis quibusdam. Nisi incidunt ducimus totam impedit sint provident error magni architecto 
+                     assumenda ex ipsam maiores dicta iusto eveniet nam sequi rerum molestias, quisquam neque quia similique minima veritatis dolorem? Quibusdam quas ipsam pariatur, inventore accusamus qui possimus sunt, 
+                     earum quos accusantium
+                     Praesentium aliquam accusantium impedit et omnis, quae pariatur reprehenderit, earum sequi cum nihil amet? Provident magnam, tempora recusandae, 
+                     inventore amet blanditiis enim nulla, obcaecati cum eligendi assum
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const memberTabs = document.querySelectorAll('.member-tab');
+            const memberCards = document.querySelectorAll('.member-card');
+            const memberBiographies = document.querySelectorAll('.member-biography');
+
+            memberTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Quitar clase active de todos los tabs
+                    memberTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Obtener el miembro seleccionado
+                    const selectedMember = tab.getAttribute('data-member');
+
+                    // Ocultar todas las tarjetas y biografías
+                    memberCards.forEach(card => {
+                        card.style.display = 'none';
+                    });
+                    memberBiographies.forEach(bio => {
+                        bio.classList.remove('active');
+                    });
+
+                    // Mostrar la tarjeta y biografía del miembro seleccionado
+                    const selectedCard = document.querySelector(`.member-card[data-member="${selectedMember}"]`);
+                    const selectedBio = document.querySelector(`.member-biography[data-member="${selectedMember}"]`);
+
+                    if (selectedCard) selectedCard.style.display = 'block';
+                    if (selectedBio) selectedBio.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2025 Ensamble Inmediato. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</html>

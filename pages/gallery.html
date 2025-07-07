@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Ensamble Inmediato</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+
+<body>
+    <header class="transparent header">
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./about.html">Historia</a>
+            <a href="./members.html">Integrantes</a>
+            <a href="../index.html#content">Conciertos </a>
+            <a href="pages/gallery.html">Galería</a>
+            <a href="../index.html#mycontact">Contacto</a>
+        </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+    <main class="gallery-container">
+      
+        <div class="image-card">
+            <img src="../images/gallery/01.JPG" alt="Imagen 1">
+            <a href="#" class="download-btn"><img src="../images/performances/descarga.png" alt="download"></a>
+        </div>
+        <div class="image-card">
+            <img src="../images/gallery/02.jpg" alt="Imagen 2">
+            <a href="#" class="download-btn"><img src="../images/performances/descarga.png" alt="download"></a>
+        </div>
+        <div class="image-card">
+            <img src="../images/gallery/03.jpg" alt="Imagen 3">
+            <a href="#" class="download-btn"><img src="../images/performances/descarga.png" alt="download"></a>
+        </div>
+        <div class="image-card">
+            <img src="../images/gallery/04.JPG" alt="Imagen 4">
+            <a href="#" class="download-btn"><img src="../images/performances/descarga.png" alt="download"></a>
+        </div>
+        <div class="image-card">
+            <img src="../images/gallery/07.jpeg" alt="Imagen 5">
+            <a href="#" class="download-btn"><img src="../images/performances/descarga.png" alt="download"></a>
+        </div>
+        <div class="image-card">
+            <img src="../images/gallery/06.jpeg" alt="Imagen 6">
+            <a href="#" class="download-btn"><img src="../images/performances/descarga.png" alt="download"></a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Ensamble Inmediato. Todos los derechos reservados.</p>
+        </div>
+        
+    </footer>
+</body>
+</html>

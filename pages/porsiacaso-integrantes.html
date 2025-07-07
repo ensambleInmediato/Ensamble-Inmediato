@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrantes - Ensamble Harmony</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/members.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="about.html">Historia</a>
+            <a href="repertoire.html">Repertorio</a>
+            <a href="concerts.html">Conciertos</a>
+            <a href="members.html" class="active">Integrantes</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="members-section">
+        <h1 class="section-title">Nuestros Integrantes</h1>
+        
+        <!-- Barra de navegación de integrantes -->
+        <div class="members-nav">
+            <button class="member-tab active" data-member="member1">Mizky Bernal Miranda</button>
+            <button class="member-tab" data-member="member2">Yerko Estevez</button>
+            <button class="member-tab" data-member="member3">Jose Ignacio Camacho Cardozo</button>
+            <button class="member-tab" data-member="member4">Guillermo Leonardini</button>
+            <button class="member-tab" data-member="member5">Jorge Monroy</button>
+        </div>
+
+        <!-- Contenido de cada integrante -->
+        <div class="member-content active" id="member1">
+            <div class="member-info">
+                <div class="member-header">
+                    <img src="./images/members/mizky-bernal.jpeg" alt="Mizky Bernal Miranda">
+                    <div class="member-details">
+                        <h2>Mizky Bernal Miranda</h2>
+                        <ul class="member-facts">
+                            <li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Edad:</strong> 33 años</li>
+                            <li><strong>Instrumento:</strong> Piano</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="member-repertoire">
+                    <h3>Repertorio Principal</h3>
+                    <ul>
+                        <li>Concierto para Violín de Tchaikovsky</li>
+                        <li>Sonatas de Bach</li>
+                        <li>Caprichos de Paganini</li>
+                    </ul>
+                </div>
+                <div class="member-education">
+                    <h3>Estudios</h3>
+                    <ul>
+                        <li>Universiad Loyola Lic. en Música</li>
+                        <li>Maestría en Barcelona</li>
+                        <li>Perfeccionamiento en Rodolfo Acosta</li>
+                    </ul>
+                </div>
+                <div class="member-links">
+                    <h3>Escuchar Interpretaciones</h3>
+                    <a href="#" class="btn">Spotify</a>
+                    <a href="#" class="btn">YouTube</a>
+                </div>
+                <div class="member-biography">
+                    <h3>Biografía</h3>
+                    <p>Biografia de Miembro del largo que quiera, ojito</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repetir la estructura para los demás miembros -->
+        <div class="member-content" id="member2">
+            <div class="member-info">
+                <div class="member-header">
+                    <img src="./images/members/yerko-estevez.jpg" alt="Yerko Estevez Salazar">
+                    <div class="member-details">
+                        <h2>Yerko Estevez Salazar</h2>
+                        <ul class="member-facts">
+                            <li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Edad:</strong> 30 años</li>
+                            <li><strong>Instrumento:</strong> Guitarra</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="member-repertoire">
+                    <h3>Repertorio Principal</h3>
+                    <ul>
+                        <li>Concierto para guitarra de Canela Palacios</li>
+                        <li>Sonatas de Bach</li>
+                        <li>Caprichos de Paganini</li>
+                    </ul>
+                </div>
+                <div class="member-education">
+                    <h3>Estudios</h3>
+                    <ul>
+                        <li>Escuela de composición en Música Contemporánea</li>
+                        <li>Maestría en Nigeria</li>
+                        <li>Perfeccionamiento en Xenakis</li>
+                    </ul>
+                </div>
+                <div class="member-links">
+                    <h3>Escuchar Interpretaciones</h3>
+                    <a href="#" class="btn">Spotify</a>
+                    <a href="#" class="btn">YouTube</a>
+                </div>
+                <div class="member-biography">
+                    <h3>Biografía</h3>
+                    <p>Biografia de Miembro del largo que quiera, ojito</p>
+                </div>
+            </div>
+        </div>
+        <!-- ... otros miembros ... -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Ensamble Inmediato. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/members.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensamble Inmediato - Integrantes</title>
+    <link rel="stylesheet" href="../css/members.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style> 
+        .svg-icon img {width: 40px; height: 40px;}
+        .member-biography {
+            display: none; /* Ocultar todas las biografías por defecto */
+        }
+        .member-biography.active {
+            display: block; /* Mostrar solo la biografía activa */
+        }
+    </style>
+</head>
+<body>
+    <header class="transparent header">
+        <div class="menu-btn" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="about.html">Historia</a>
+            <a href="members.html">Integrantes</a>
+            <a href="../index.html#content">Conciertos</a>
+            <a href="gallery.html">Galería</a>
+            <a href="../index.html#mycontact">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="members-section">
+        <div class="container">
+            <h1 class="section-title">Integrantes</h1>
+            <div class="members-nav">
+                <button class="member-tab active" data-member="member1"><img src="../images/members/member1.jpg" alt="Mizky Bernal Miranda"></button>
+                <button class="member-tab" data-member="member2"><img src="../images/members/member2.jpg" alt="Yerko Esetevez"></button>
+                <button class="member-tab" data-member="member3"><img src="../images/members/member3.jpeg" alt="Jose Ignacion Camacho"></button>
+                <button class="member-tab" data-member="member4"><img src="../images/members/member4.jpeg" alt="Guillermo Leonardini"></button>
+                <button class="member-tab" data-member="member5"><img src="../images/members/member5.jpeg" alt="Jorge Monroy"></button>
+            </div>
+            <div class="members-list">
+                <!-- Primer miembro activo por defecto -->
+                <div class="member-card" data-member="member1">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Mizky Bernal Miranda</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> 1991</li>
+                            <li><strong>Instrumento:</strong> Piano</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography active" data-member="member1">
+                    <h3>Biografía</h3>
+                    <h2>Mizky Bernal Miranda</h2>
+                    <p>Biografía detallada de Mizky Bernal Miranda...</p>
+                </div>
+
+                <!-- Segundo miembro -->
+                <div class="member-card" data-member="member2" style="display:none;">
+                    <div class="member-details">
+                        <div class="composer">
+                            <div class="composer-name"><h2>Yerko Estevez Salazar</h2></div>
+                            <div class="composer-details"><li><strong>Nacionalidad:</strong> Boliviana</li>
+                            <li><strong>Fecha de Nacimiento:</strong> 1994</li>
+                            <li><strong>Instrumento:</strong> Guitarra</li></div>
+                        </div>
+                    <div>
+                        <ul class="member-social">
+                            <li><a  class="svg-icon" href="https://www.facebook.com/MIZKY"><img src="../images/performances/facebook.svg" alt="link-a-facebook"></a></li>
+                            <li><a  class="svg-icon" href="https://www.instagram.com/mizkymb/"><img src="../images/performances/instagram.svg" alt="link-a-instagram"></a></li>
+                            <li><a  class="svg-icon" href="mizkybernalmiranda@gmail.com"><img src="../images/performances/gmail.svg" alt="link-a-gmail"></a></li>
+                            <li><a  class="svg-icon" href="https://on.soundcloud.com/QJwC34YwnFAYUv189"><img src="../images/performances/soundcloud.svg" alt="link-a-soundcloud"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="member-biography" data-member="member2">
+                    <h3>Biografía</h3>
+                    <h2>Yerko Estevez Salazar</h2>
+                    <p>Biografía detallada de Yerko Estevez Salazar...</p>
+                </div>
+
+                <!-- Puedes agregar más miembros siguiendo el mismo patrón -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const memberTabs = document.querySelectorAll('.member-tab');
+            const memberCards = document.querySelectorAll('.member-card');
+            const memberBiographies = document.querySelectorAll('.member-biography');
+
+            memberTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Quitar clase active de todos los tabs
+                    memberTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    // Obtener el miembro seleccionado
+                    const selectedMember = tab.getAttribute('data-member');
+
+                    // Ocultar todas las tarjetas y biografías
+                    memberCards.forEach(card => {
+                        card.style.display = 'none';
+                    });
+                    memberBiographies.forEach(bio => {
+                        bio.classList.remove('active');
+                    });
+
+                    // Mostrar la tarjeta y biografía del miembro seleccionado
+                    const selectedCard = document.querySelector(`.member-card[data-member="${selectedMember}"]`);
+                    const selectedBio = document.querySelector(`.member-biography[data-member="${selectedMember}"]`);
+
+                    if (selectedCard) selectedCard.style.display = 'block';
+                    if (selectedBio) selectedBio.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
