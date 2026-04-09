@@ -337,3 +337,14 @@ footer p {
 .member-btn.next {
   right: 5px;
 }
+.member-slide img {
+  width: 100%;
+  max-width: 400px; /* 🔥 más grande */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .member-slide img {
+    max-width: 90%;
+  }
+}
