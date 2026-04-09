@@ -567,8 +567,17 @@ section.social-section-art {
 
 .social-section-art .social-links-art {
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
   gap: 30px !important;
+  flex-wrap: wrap !important; /* opcional pero recomendable */
+  justify-content: center; /* opcional: centra los botones */
+}
+
+@media (max-width: 600px) {
+  .social-section-art .social-links-art {
+    flex-direction: column !important;
+    align-items: center;
+  }
 }
 
 .social-section-art .social-link-art {
