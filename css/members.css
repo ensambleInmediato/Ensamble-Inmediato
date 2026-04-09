@@ -94,7 +94,7 @@ nav a {
 /* BOTONES SOBRE IMAGEN */
 .member-btn {
   position: absolute;
-  top: 20%;
+  top: 80%;
   transform: translateY(-50%);
   z-index: 10;
 
