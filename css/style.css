@@ -548,4 +548,66 @@ footer {
   background: #000;
 }
 
+/* ===== FIX REDES (FORZADO) ===== */
 
+section.social-section-art {
+  padding: 100px 20px !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+}
+
+.social-section-art .social-label {
+  font-size: 0.8rem !important;
+  letter-spacing: 4px !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,0.5) !important;
+  margin-bottom: 40px !important;
+  display: block !important;
+}
+
+.social-section-art .social-links-art {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 30px !important;
+}
+
+.social-section-art .social-link-art {
+  display: inline-block !important;
+  font-size: 2rem !important;
+  color: white !important;
+  text-decoration: none !important;
+  position: relative !important;
+  padding-bottom: 10px !important;
+}
+
+/* línea base visible */
+.social-section-art .social-link-art::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 40px !important;
+  height: 1px !important;
+  background: rgba(255,255,255,0.3) !important;
+}
+
+/* animación */
+.social-section-art .social-link-art::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 0% !important;
+  height: 1px !important;
+  background: var(--color-accent) !important;
+  transition: width 0.4s ease !important;
+}
+
+.social-section-art .social-link-art:hover::after {
+  width: 100% !important;
+}
+
+.social-section-art .social-link-art:hover {
+  transform: translateX(10px) !important;
+  color: var(--color-accent) !important;
+}
