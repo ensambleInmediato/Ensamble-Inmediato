@@ -72,87 +72,69 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const carousel = document.querySelector('.image-carousel');
-            const images = carousel.querySelectorAll('img');
-            let currentIndex = 0;
-
-            function rotateImages() {
-                // Quitar la clase active de la imagen actual
-                images[currentIndex].classList.remove('active');
-
-                // Incrementar el índice (volver al inicio si llega al final)
-                currentIndex = (currentIndex + 1) % images.length;
-
-                // Añadir la clase active a la siguiente imagen
-                images[currentIndex].classList.add('active');
-            }
-
-            // Rotar imágenes cada 10 segundos
-            setInterval(rotateImages, 5000);
-        });
-    </script>
-
     <footer>
         <div class="footer-content">
             <p>© 2025 Ensamble Inmediato. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="../js/members.js"></script>
-    <script>
+<script>
 const track = document.querySelector('.carousel-track');
-const images = document.querySelectorAll('.carousel-track img');
-const nextBtn = document.querySelector('.carousel-btn.next');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const dotsContainer = document.querySelector('.carousel-dots');
 
-let index = 0;
+if (track) {
 
-// Crear dots
-images.forEach((_, i) => {
-  const dot = document.createElement('span');
-  if(i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => moveToSlide(i));
-  dotsContainer.appendChild(dot);
-});
+  const images = document.querySelectorAll('.carousel-track img');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const dotsContainer = document.querySelector('.carousel-dots');
 
-const dots = document.querySelectorAll('.carousel-dots span');
+  let index = 0;
 
-function updateCarousel() {
-  track.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
+  images.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if(i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => moveToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.carousel-dots span');
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  function moveToSlide(i) {
+    index = i;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+
+  // Swipe
+  let startX = 0;
+
+  track.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) nextBtn.click();
+    if (endX - startX > 50) prevBtn.click();
+  });
+
 }
-
-function moveToSlide(i) {
-  index = i;
-  updateCarousel();
-}
-
-nextBtn.addEventListener('click', () => {
-  index = (index + 1) % images.length;
-  updateCarousel();
-});
-
-prevBtn.addEventListener('click', () => {
-  index = (index - 1 + images.length) % images.length;
-  updateCarousel();
-});
-
-// Swipe (celular)
-let startX = 0;
-
-track.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
-
-track.addEventListener('touchend', e => {
-  let endX = e.changedTouches[0].clientX;
-
-  if (startX - endX > 50) nextBtn.click();
-  if (endX - startX > 50) prevBtn.click();
-});
 </script>
 </body>
 </html>
