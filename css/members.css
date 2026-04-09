@@ -255,3 +255,65 @@ footer p {
     margin-inline-end: 0px;
     unicode-bidi: isolate;
 }
+.members-carousel {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.members-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.members-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.member-slide {
+  min-width: 100%;
+  padding: 20px;
+}
+
+.member-slide img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.member-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.member-slide p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Botones */
+.member-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.member-btn.prev { left: 10px; }
+.member-btn.next { right: 10px; }
+
+/* 📱 Celular */
+@media (max-width: 768px) {
+  .member-slide img {
+    max-width: 180px;
+  }
+}
