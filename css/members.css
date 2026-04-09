@@ -1,101 +1,66 @@
-/* =========================
-RESET
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-VARIABLES
-========================= */
+/* VARIABLES */
 :root {
   --color-primary: #462c95;
-  --color-secondary: #9E8FCE;
   --color-accent: #986853;
   --color-text: #ffffff;
-  --color-text-dark: #333333;
-  --color-background: #040411;
-  --font-primary: 'music-serif', Georgia, serif;
-  --font-secondary: Arial, sans-serif;
+  --color-bg: #040411;
+  --font-main: Arial, sans-serif;
 }
 
-/* =========================
-BASE
-========================= */
+/* BASE */
 body {
-  font-family: var(--font-secondary);
-  line-height: 1.6;
+  font-family: var(--font-main);
+  background: var(--color-bg);
   color: var(--color-text);
-  background-color: var(--color-background);
+  line-height: 1.6;
 }
 
-/* =========================
-HEADER
-========================= */
+/* HEADER SIMPLE */
 header {
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
   z-index: 1000;
-  backdrop-filter: blur(8px);
-  background: rgba(0,0,0,0.6);
 }
 
 nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  position: relative;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: var(--color-accent);
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* =========================
-TÍTULOS
-========================= */
+/* TITULO */
 .section-title {
-  font-family: var(--font-primary);
-  font-size: 2.5rem;
   text-align: center;
-  margin: 100px 0 40px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  font-size: 2rem;
   color: var(--color-accent);
 }
 
-/* =========================
-CARRUSEL MIEMBROS
-========================= */
+/* CARRUSEL */
 .members-carousel {
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .members-container {
   position: relative;
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
   overflow: hidden;
 }
 
@@ -104,43 +69,48 @@ CARRUSEL MIEMBROS
   transition: transform 0.4s ease;
 }
 
+/* SLIDE */
 .member-slide {
   min-width: 100%;
   padding: 20px;
   text-align: center;
 }
 
-/* =========================
-IMAGEN + BOTONES
-========================= */
+/* IMAGEN */
 .member-image {
   position: relative;
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .member-image img {
   width: 100%;
   max-width: 420px;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* BOTONES */
+/* BOTONES SOBRE IMAGEN */
 .member-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 50;
+  z-index: 10;
+
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
 
   width: 45px;
   height: 45px;
   border-radius: 50%;
-
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(0,0,0,0.5);
-  color: white;
-
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .member-btn.prev {
@@ -152,53 +122,50 @@ IMAGEN + BOTONES
 }
 
 .member-btn:hover {
-  background: rgba(255,255,255,0.3);
-  transform: translateY(-50%) scale(1.1);
+  background: rgba(0,0,0,0.8);
 }
 
-/* =========================
-INFO MIEMBRO
-========================= */
+/* INFO */
+.member-slide h2 {
+  margin-top: 15px;
+}
+
 .member-info {
   list-style: none;
+  margin: 15px auto;
   max-width: 400px;
-  margin: 20px auto;
   text-align: left;
 }
 
+/* TEXTO */
 .member-slide p {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: left;
-  line-height: 1.7;
+  font-size: 1rem;
 }
 
-/* =========================
-FOOTER
-========================= */
+/* FOOTER */
 footer {
-  margin-top: 60px;
-  padding: 40px;
+  margin-top: 50px;
+  padding: 20px;
   text-align: center;
   background: rgba(0,0,0,0.3);
 }
 
-/* =========================
-RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-
   .member-image img {
     max-width: 90%;
   }
 
+  .member-slide p {
+    font-size: 0.95rem;
+  }
+
   .member-btn {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
   }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
 }
