@@ -118,39 +118,43 @@
 
 </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const memberTabs = document.querySelectorAll('.member-tab');
-            const memberCards = document.querySelectorAll('.member-card');
-            const memberBiographies = document.querySelectorAll('.member-biography');
+<script>
+const track = document.querySelector('.members-track');
+const slides = document.querySelectorAll('.member-slide');
+const nextBtn = document.querySelector('.member-btn.next');
+const prevBtn = document.querySelector('.member-btn.prev');
 
-            memberTabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Quitar clase active de todos los tabs
-                    memberTabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
+let index = 0;
 
-                    // Obtener el miembro seleccionado
-                    const selectedMember = tab.getAttribute('data-member');
+function updateSlide() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
 
-                    // Ocultar todas las tarjetas y biografías
-                    memberCards.forEach(card => {
-                        card.style.display = 'none';
-                    });
-                    memberBiographies.forEach(bio => {
-                        bio.classList.remove('active');
-                    });
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  updateSlide();
+});
 
-                    // Mostrar la tarjeta y biografía del miembro seleccionado
-                    const selectedCard = document.querySelector(`.member-card[data-member="${selectedMember}"]`);
-                    const selectedBio = document.querySelector(`.member-biography[data-member="${selectedMember}"]`);
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlide();
+});
 
-                    if (selectedCard) selectedCard.style.display = 'block';
-                    if (selectedBio) selectedBio.classList.add('active');
-                });
-            });
-        });
-    </script>
+// Swipe
+let startX = 0;
+
+track.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) nextBtn.click();
+  if (endX - startX > 50) prevBtn.click();
+});
+</script>
+	
 </body>
 
 <footer>
