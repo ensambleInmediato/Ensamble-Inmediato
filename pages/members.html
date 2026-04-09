@@ -1,142 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ensamble Inmediato - Integrantes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="../css/style.css">
+<title>Ensamble Inmediato - Integrantes</title>
+
+<style>
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #040411;
+  color: white;
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== TITULO ===== */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 120px 0 40px;
+}
+
+/* ===== CARRUSEL ===== */
+.members-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.members-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.member-slide {
+  min-width: 100%;
+  padding: 20px;
+}
+
+/* ===== IMAGEN ===== */
+.member-image {
+  display: flex;
+  justify-content: center;
+}
+
+.member-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+}
+
+/* ===== BOTONES ===== */
+.member-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.member-btn.prev { left: 10px; }
+.member-btn.next { right: 10px; }
+
+/* ===== TEXTO ===== */
+.member-slide h2 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.member-info {
+  max-width: 420px;
+  margin: 15px auto;
+  text-align: left;
+}
+
+.member-slide p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+  text-align: left;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .member-image img {
+    max-width: 90%;
+  }
+
+  .member-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="about.html">Historia</a>
-    <a href="members.html">Integrantes</a>
-    <a href="../index.html#content">Conciertos</a>
-    <a href="gallery.html">Galería</a>
-    <a href="../index.html#mycontact">Contacto</a>
-  </nav>
+<nav>
+<a href="../index.html">Inicio</a>
+<a href="about.html">Historia</a>
+<a href="members.html">Integrantes</a>
+<a href="../index.html#content">Conciertos</a>
+<a href="gallery.html">Galería</a>
+<a href="../index.html#mycontact">Contacto</a>
+</nav>
 </header>
 
-<!-- ================= CARRUSEL ================= -->
-<section class="members-carousel">
+<h1 class="section-title">Integrantes</h1>
 
-  <h1 class="section-title">Integrantes</h1>
+<div class="members-container">
+<div class="members-track">
 
-  <div class="members-container">
+<!-- MIZKY -->
+<div class="member-slide">
+<div class="member-image">
+<img src="../images/members/mizky.jpg">
+</div>
+<h2>Mizky Bernal Miranda</h2>
+<div class="member-info">
+<strong>Nacionalidad:</strong> Boliviana<br>
+<strong>Nacimiento:</strong> Enero 1991<br>
+<strong>Instrumento:</strong> Piano
+</div>
 
-    <div class="members-track">
+<p>Mizky B. Bernal Miranda (Cochabamba, 1991) es compositora y artista sonora boliviana cuya práctica explora la escucha expandida, el territorio y la memoria. Obtuvo su licenciatura en Música de la Universidad Loyola en el año 2021 y posteriormente completó una Maestría en Arte Sonoro en la Universidad de Barcelona en el año 2024.</p>
 
-      <!-- ===== MIEMBRO 1 ===== -->
-      <div class="member-slide">
-        <div class="member-image">
-          <img src="../images/members/mizky.jpg" alt="Mizky Bernal Miranda">
-        </div>
+<p>Recibió su formación en dirección musical, composición y piano con distintos maestros nacionales e internacionales. Como directora, participó como ayudante en la Orquesta de Cámara Compa (2015-2016). Como intérprete, ha sido invitada por el Ensamble Maleza y actualmente integra el Ensamble Inmediato.</p>
 
-        <h2>Mizky Bernal Miranda</h2>
+<p>Ha participado en múltiples festivales y encuentros en Bolivia y el extranjero, incluyendo las Jornadas de Música Contemporánea, el Festival Boliviano de Música y otros espacios relevantes.</p>
 
-        <ul class="member-info">
-          <li><strong>Nacionalidad:</strong> Boliviana</li>
-          <li><strong>Nacimiento:</strong> Enero 1991</li>
-          <li><strong>Instrumento:</strong> Piano</li>
-        </ul>
+<p>Desde 2020 estudió con Julio Estrada y Hugo Solís en creación y programación musical. En 2022 cursó un diplomado en arte sonoro (Tsonami). Ha colaborado con diversos ensambles y ha presentado obras en América Latina y Europa.</p>
 
-        <p>Compositora y artista sonora boliviana. Su trabajo explora la escucha expandida, el territorio y la memoria. Ha participado en festivales, proyectos internacionales y procesos de investigación en arte sonoro y música contemporánea.</p>
-      </div>
+<p>En 2025 fue seleccionada en múltiples convocatorias internacionales como la International Computer Music Conference y Darmstädter Ferienkurse.</p>
+</div>
 
-      <!-- ===== MIEMBRO 2 ===== -->
-      <div class="member-slide">
-        <div class="member-image">
-          <img src="../images/members/jorge.jpg" alt="Jorge Monroy">
-        </div>
+<!-- JORGE -->
+<div class="member-slide">
+<div class="member-image">
+<img src="../images/members/jorge.jpg">
+</div>
+<h2>Jorge Monroy</h2>
+<div class="member-info">
+<strong>Nacionalidad:</strong> Boliviana<br>
+<strong>Nacimiento:</strong> 1994<br>
+<strong>Instrumento:</strong> Electrónica / Guitarra
+</div>
 
-        <h2>Jorge Monroy</h2>
+<p>Jorge Monroy nació en La Paz en 1994 y desarrolla una práctica que articula electrónica, improvisación y música experimental.</p>
 
-        <ul class="member-info">
-          <li><strong>Nacionalidad:</strong> Boliviana</li>
-          <li><strong>Nacimiento:</strong> Noviembre 1994</li>
-          <li><strong>Instrumento:</strong> Electrónica y guitarra</li>
-        </ul>
+<p>Su trabajo investiga nuevas formas de creación sonora y la relación entre espacio, tecnología y escucha.</p>
 
-        <p>Compositor y artista multidisciplinario enfocado en la experimentación sonora, la improvisación y la intersección entre música electrónica y prácticas contemporáneas.</p>
-      </div>
+<p>Sus obras han sido interpretadas por distintos ensambles en Bolivia y Colombia.</p>
+</div>
 
-      <!-- ===== MIEMBRO 3 ===== -->
-      <div class="member-slide">
-        <div class="member-image">
-          <img src="../images/members/IMG_5034.jpeg" alt="José Camacho">
-        </div>
+<!-- JOSE -->
+<div class="member-slide">
+<div class="member-image">
+<img src="../images/members/IMG_5034.jpeg">
+</div>
+<h2>José Camacho Cardozo</h2>
+<div class="member-info">
+<strong>Nacionalidad:</strong> Boliviana<br>
+<strong>Nacimiento:</strong> 1993<br>
+<strong>Instrumento:</strong> Guitarra eléctrica
+</div>
 
-        <h2>José Camacho</h2>
+<p>Compositor, guitarrista y diseñador gráfico. Su música ha sido interpretada en América Latina y Europa.</p>
 
-        <ul class="member-info">
-          <li><strong>Nacionalidad:</strong> Boliviana</li>
-          <li><strong>Nacimiento:</strong> Julio 1993</li>
-          <li><strong>Instrumento:</strong> Guitarra eléctrica</li>
-        </ul>
+<p>Ganador del Concurso Hermann (2021) y Premios Abaroa (2022).</p>
 
-        <p>Compositor, guitarrista y diseñador. Su trabajo se centra en la música contemporánea, experimental y medios mixtos, con presencia en América Latina y Europa.</p>
-      </div>
+<p>Miembro del Ensamble Inmediato y guitarrista en Los Sapos.</p>
+</div>
 
-      <!-- ===== MIEMBRO 4 ===== -->
-      <div class="member-slide">
-        <div class="member-image">
-          <img src="../images/members/IMG_5035.jpeg" alt="Yerko Estevez">
-        </div>
+<!-- YERKO -->
+<div class="member-slide">
+<div class="member-image">
+<img src="../images/members/IMG_5035.jpeg">
+</div>
+<h2>Yerko Estevez</h2>
+<div class="member-info">
+<strong>Nacionalidad:</strong> Boliviana<br>
+<strong>Nacimiento:</strong> 1994<br>
+<strong>Instrumento:</strong> Guitarra
+</div>
 
-        <h2>Yerko Estevez</h2>
+<p>Formado en el Conservatorio Plurinacional y en Casataller, ha trabajado con compositores internacionales.</p>
 
-        <ul class="member-info">
-          <li><strong>Nacionalidad:</strong> Boliviana</li>
-          <li><strong>Nacimiento:</strong> Agosto 1994</li>
-          <li><strong>Instrumento:</strong> Guitarra</li>
-        </ul>
+<p>Ha participado en festivales y concursos de música contemporánea.</p>
+</div>
 
-        <p>Compositor enfocado en la música contemporánea y experimental, con formación en Bolivia y participación en proyectos internacionales.</p>
-      </div>
+</div>
 
-      <!-- ===== MIEMBRO 5 ===== -->
-      <div class="member-slide">
-        <div class="member-image">
-          <img src="../images/members/alejandro.jpg" alt="Alejandro Flores">
-        </div>
+<button class="member-btn prev">&#10094;</button>
+<button class="member-btn next">&#10095;</button>
 
-        <h2>Alejandro Flores</h2>
+</div>
 
-        <ul class="member-info">
-          <li><strong>Nacionalidad:</strong> Boliviana</li>
-          <li><strong>Nacimiento:</strong> 1994</li>
-          <li><strong>Instrumento:</strong> Clarinete</li>
-        </ul>
-
-        <p>Intérprete enfocado en repertorio contemporáneo y nuevas prácticas de interpretación.</p>
-      </div>
-
-    </div>
-
-    <!-- BOTONES -->
-    <button class="member-btn prev">‹</button>
-    <button class="member-btn next">›</button>
-
-  </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-  <p>© 2025 Ensamble Inmediato. Todos los derechos reservados.</p>
-</footer>
-
-<!-- ================= JS ================= -->
 <script>
 const track = document.querySelector('.members-track');
 const slides = document.querySelectorAll('.member-slide');
-const nextBtn = document.querySelector('.member-btn.next');
-const prevBtn = document.querySelector('.member-btn.prev');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
 
 let index = 0;
 
@@ -144,29 +256,15 @@ function updateSlide() {
   track.style.transform = `translateX(-${index * 100}%)`;
 }
 
-nextBtn.addEventListener('click', () => {
+nextBtn.onclick = () => {
   index = (index + 1) % slides.length;
   updateSlide();
-});
+};
 
-prevBtn.addEventListener('click', () => {
+prevBtn.onclick = () => {
   index = (index - 1 + slides.length) % slides.length;
   updateSlide();
-});
-
-/* SWIPE (celular) */
-let startX = 0;
-
-track.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
-
-track.addEventListener('touchend', e => {
-  let endX = e.changedTouches[0].clientX;
-
-  if (startX - endX > 50) nextBtn.click();
-  if (endX - startX > 50) prevBtn.click();
-});
+};
 </script>
 
 </body>
