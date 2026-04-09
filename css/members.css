@@ -373,7 +373,7 @@ footer p {
 
 .member-btn {
   position: absolute;
-  top: 350px; /* 🔥 ajusta según tu imagen */
+  top: 700px; /* 🔥 ajusta según tu imagen */
   transform: translateY(-50%);
   z-index: 20;
 }
