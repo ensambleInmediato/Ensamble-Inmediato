@@ -348,3 +348,19 @@ footer p {
     max-width: 90%;
   }
 }
+
+.member-slide {
+  text-align: center;
+}
+
+.member-slide p {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.member-info {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto 15px;
+}
