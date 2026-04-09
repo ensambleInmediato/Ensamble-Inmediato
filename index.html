@@ -105,17 +105,33 @@
 
 </section>
 
-<section id="videos" style="padding:60px 20px; text-align:center;">
-  <h2 style="margin-bottom:30px;">Videos</h2>
+<section id="videos" style="padding:60px 20px; text-align:center; width:100%;">
+  <h2 style="margin-bottom:10px;">Videos</h2>
 
   <div style="
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap:20px;
-    max-width:100%;
-    margin:0 auto;
-  ">
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  width:100%;
+">
 
+
+<style>
+@media (max-width: 900px) {
+  #videos div {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #videos div {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+      
+      
     <!-- Short 1 -->
     <div style="position:relative; width:100%; aspect-ratio:16/9;">
       <iframe 
