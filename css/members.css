@@ -317,3 +317,23 @@ footer p {
     max-width: 180px;
   }
 }
+.member-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botones posicionados sobre la imagen */
+.member-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.member-btn.prev {
+  left: 5px;
+}
+
+.member-btn.next {
+  right: 5px;
+}
